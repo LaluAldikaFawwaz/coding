@@ -1,0 +1,207 @@
+<html>
+<head>
+    <title>Security App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a2a4d;
+            color: white;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url('https://placehold.co/50x50') no-repeat center center;
+            background-size: cover;
+        }
+        .notification-icon {
+            font-size: 24px;
+            color: white;
+        }
+        .status-card {
+            background-color: #1a3b5d;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .status-card h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .status-card p {
+            margin: 5px 0;
+            color: #a0c4ff;
+        }
+        .status-card button {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .security-elements {
+            margin: 20px 0;
+        }
+        .security-elements h3 {
+            margin-bottom: 10px;
+        }
+        .element {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #1a3b5d;
+        }
+        .element i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .element p {
+            margin: 0;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 12px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #3dd118;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+        .threat-statistics {
+            margin: 20px 0;
+        }
+        .threat-statistics h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chart {
+            height: 200px;
+            background: url('https://placehold.co/300x200') no-repeat center center;
+            background-size: cover;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #1a3b5d;
+            border-radius: 10px 10px 0 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer i {
+            font-size: 24px;
+            color: white;
+        }
+
+        p {
+            font-size: 16px;
+            color: #d61616;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-pic"></div>
+            <i class="fas fa-bell notification-icon"></i>
+        </div>
+        <div class="status-card">
+            <h2>device is <span style="color: #57dc33;">protected Anti Ban</span></h2>
+            <p>Last scan 2 hours ago</p>
+            <button>Update System</button>
+        </div>
+        <div class="security-elements">
+            <h3>Scanning elements By System</h3>
+            <div class="element">
+                <div>
+                    <i class="fas fa-desktop"></i>
+                    <p>Scanning devices</p>
+                    <small>Bypass Real time</small>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="element">
+                <div>
+                    <i class="fas fa-cloud"></i>
+                    <p>Aim Head Trcik</p>
+                    <small>Transferring files from a device</small>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="element">
+                <div>
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Aimlock System Base External Memory</p>
+                    <small>Protect your privacy</small>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer">
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-key"></i>
+        <i class="fas fa-cloud"></i>
+        <i class="fas fa-cog"></i>
+        <i class="fas fa-user"></i>
+    </div>
+</body>
+</html>
